@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almieh & Neil Bryan | Wedding Celebration</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS (Animate on Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Supabase SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        const supabaseUrl = 'https://upqymibalnhzreusyfkf.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVwcXltaWJhbG5oenJldXN5ZmtmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ0NzM0ODQsImV4cCI6MjA5MDA0OTQ4NH0.AHC5tbvlqHsXKgdA5FoP_Qclyc6yRrZ17bUR2U3a9HI';
+        const _supabase = supabase.createClient(supabaseUrl, supabaseKey);
+    </script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        beige: {
+                            50: '#faf9f6',
+                            100: '#f9f6f2',
+                            200: '#e9e4db',
+                            300: '#d9d1c7',
+                            DEFAULT: '#f5f5dc'
+                        },
+                        gold: '#c5a059',
+                        dark: '#4a4238',
+                        light: '#8b7e6a'
+                    },
+                    fontFamily: {
+                        playfair: ['"Playfair Display"', 'serif'],
+                        montserrat: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f5dc 0%, #e9e4db 50%, #d9d1c7 100%);
+            background-attachment: fixed;
+            color: #4a4238;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, rgba(245, 245, 220, 0.9) 0%, rgba(233, 228, 219, 0.9) 100%);
+        }
+
+        .hero-clip {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+        }
+    </style>
+</head>
+
+<body class="font-montserrat overflow-x-hidden selection:bg-gold selection:text-white">
+
+    <!-- Home / Hero Section -->
+    <section id="home" class="relative min-h-screen flex flex-col items-center justify-center pt-32 px-6 text-center">
+        <div class="absolute inset-0 z-0">
+            <img src="bg1.jpg" alt="Hero Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/30"></div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-duration="1500"
+            class="relative z-10 w-full max-w-5xl flex flex-col items-center">
+
+            <p class="text-gold tracking-[0.6em] uppercase text-[10px] md:text-xs mb-6 font-bold">Save Our Date</p>
+            <h1 class="font-playfair text-5xl md:text-8xl mb-6 font-bold tracking-tight text-white drop-shadow-lg">
+                Almieh & Neil Bryan
+            </h1>
+            <p class="text-xl md:text-3xl text-white/80 italic font-playfair mb-4">May 25, 2026</p>
+            <p class="text-xs tracking-[0.4em] text-white/60 uppercase font-semibold">Casa De Canitoan | Cagayan de Oro
+            </p>
+        </div>
+
+        <div class="mt-16 animate-bounce">
+            <a href="#story" class="text-gold opacity-40 hover:opacity-100 transition-opacity">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story" class="py-24 px-6 max-w-5xl mx-auto">
+        <div class="text-center mb-20" data-aos="fade-up">
+            <h2 class="font-playfair text-4xl md:text-5xl mb-6 relative inline-block">
+                Our Love Story
+                <span class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-16 h-0.5 bg-gold"></span>
+            </h2>
+        </div>
+
+        <div class="space-y-24">
+            <!-- Story Item 1 -->
+            <div class="flex flex-col md:flex-row items-center gap-12" data-aos="fade-right">
+                <div class="flex-1 space-y-4">
+                    <p class="font-playfair italic text-gold">May 10, 2021</p>
+                    <h3 class="text-2xl font-playfair font-bold">The First Encounter</h3>
+                    <p class="text-light leading-relaxed">It all started with a simple hello. A moment that felt
+                        ordinary at the time, but would soon change the course of our lives forever. We found in each
+                        other a kindred spirit and a companion for life's greatest adventures.</p>
+                </div>
+                <div
+                    class="w-full h-[350px] md:h-96 md:flex-1 min-h-[350px] flex-shrink-0 bg-beige-200 border-x border-gold shadow-inner flex items-center justify-center italic text-gold relative overflow-hidden">
+                    <img src="bg1.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60"
+                        alt="The Beginning">
+                    <span class="relative z-10 font-bold bg-white/20 backdrop-blur-sm px-4 py-2 rounded">The
+                        Beginning</span>
+                </div>
+            </div>
+
+            <!-- Story Item 2 -->
+            <div class="flex flex-col md:flex-row-reverse items-center gap-12" data-aos="fade-left">
+                <div class="flex-1 space-y-4 text-left md:text-right">
+                    <p class="font-playfair italic text-gold">September 14, 2023</p>
+                    <h3 class="text-2xl font-playfair font-bold">The Proposal</h3>
+                    <p class="text-light leading-relaxed">Underneath the starlit sky, Neil Bryan asked the big question
+                        and Almieh said yes! A night filled with tears of joy, endless smiles, and the promise of a
+                        lifetime spent together in love and harmony.</p>
+                </div>
+                <div
+                    class="w-full h-[350px] md:h-96 md:flex-1 min-h-[350px] flex-shrink-0 bg-beige-200 border-x border-gold shadow-inner flex items-center justify-center italic text-gold relative overflow-hidden">
+                    <img src="bg1.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60" alt="The Yes">
+                    <span class="relative z-10 font-bold bg-white/20 backdrop-blur-sm px-4 py-2 rounded">The Yes</span>
+                </div>
+            </div>
+
+            <!-- Story Item 3 -->
+            <div class="flex flex-col md:flex-row items-center gap-12" data-aos="fade-right">
+                <div class="flex-1 space-y-4">
+                    <p class="font-playfair italic text-gold">May 25, 2026</p>
+                    <h3 class="text-2xl font-playfair font-bold">The Forever</h3>
+                    <p class="text-light leading-relaxed">Today, we begin our greatest adventure yet. We cannot wait to
+                        see what the future holds for us as husband and wife. Every step we take from here on will be
+                        together, hand in hand.</p>
+                </div>
+                <div
+                    class="w-full h-[350px] md:h-96 md:flex-1 min-h-[350px] flex-shrink-0 bg-beige-200 border-x border-gold shadow-inner flex items-center justify-center italic text-gold relative overflow-hidden">
+                    <img src="bg1.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60" alt="Our Wedding">
+                    <span class="relative z-10 font-bold bg-white/20 backdrop-blur-sm px-4 py-2 rounded">Our
+                        Wedding</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Countdown Section -->
+        <div id="countdown-container" class="mt-32 text-center" data-aos="fade-up">
+            <h3 class="font-playfair text-2xl md:text-3xl mb-12 italic text-gold relative inline-block">
+                Counting down to May 25, 2026
+                <span class="absolute -bottom-2 left-0 w-full h-px bg-gold/30"></span>
+            </h3>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-8 max-w-xs md:max-w-5xl mx-auto px-4">
+                <div class="flex flex-col items-center justify-center p-5 md:p-8 bg-white/40 backdrop-blur-md border border-beige-200 shadow-sm transition-transform hover:scale-105 duration-300" data-aos="zoom-in" data-aos-delay="100">
+                    <span id="days" class="text-3xl md:text-6xl font-playfair font-bold text-dark">00</span>
+                    <span class="text-[9px] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.3em] text-light mt-2 md:mt-3 block font-semibold">Days</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-5 md:p-8 bg-white/40 backdrop-blur-md border border-beige-200 shadow-sm transition-transform hover:scale-105 duration-300" data-aos="zoom-in" data-aos-delay="200">
+                    <span id="hours" class="text-3xl md:text-6xl font-playfair font-bold text-dark">00</span>
+                    <span class="text-[9px] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.3em] text-light mt-2 md:mt-3 block font-semibold">Hours</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-5 md:p-8 bg-white/40 backdrop-blur-md border border-beige-200 shadow-sm transition-transform hover:scale-105 duration-300" data-aos="zoom-in" data-aos-delay="300">
+                    <span id="minutes" class="text-3xl md:text-6xl font-playfair font-bold text-dark">00</span>
+                    <span class="text-[9px] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.3em] text-light mt-2 md:mt-3 block font-semibold">Minutes</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-5 md:p-8 bg-white/40 backdrop-blur-md border border-beige-200 shadow-sm transition-transform hover:scale-105 duration-300" data-aos="zoom-in" data-aos-delay="400">
+                    <span id="seconds" class="text-3xl md:text-6xl font-playfair font-bold text-dark">00</span>
+                    <span class="text-[9px] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.3em] text-light mt-2 md:mt-3 block font-semibold">Seconds</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Details Section -->
+    <section id="details" class="py-24 bg-[#f2ede4]">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <div class="mb-20" data-aos="fade-up">
+                <h2 class="font-playfair text-4xl md:text-5xl mb-6 relative inline-block">
+                    When & Where
+                    <span class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-16 h-0.5 bg-gold"></span>
+                </h2>
+                <p class="mt-8 text-light font-medium tracking-widest text-sm uppercase">Join us in celebrating this
+                    special day</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-10 bg-white/60 backdrop-blur-sm border border-beige-200 hover:border-gold transition-colors duration-500 shadow-sm"
+                    data-aos="zoom-in" data-aos-delay="100">
+                    <h3 class="font-playfair text-2xl mb-4">Ceremony</h3>
+                    <p class="text-gold text-sm font-semibold mb-6">2:00 PM</p>
+                    <p class="text-dark leading-relaxed">Chapel of Transfiguration<br>Calaruega, Nasugbu, Batangas</p>
+                </div>
+
+                <div class="p-10 bg-white/60 backdrop-blur-sm border border-beige-200 hover:border-gold transition-colors duration-500 shadow-sm"
+                    data-aos="zoom-in" data-aos-delay="200">
+                    <h3 class="font-playfair text-2xl mb-4">Reception</h3>
+                    <p class="text-gold text-sm font-semibold mb-6">5:00 PM</p>
+                    <p class="text-dark leading-relaxed">Alta Veranda de Tibig<br>Silang, Cavite, Philippines</p>
+                </div>
+
+                <div class="p-10 bg-white/60 backdrop-blur-sm border border-beige-200 hover:border-gold transition-colors duration-500 shadow-sm"
+                    data-aos="zoom-in" data-aos-delay="300">
+                    <h3 class="font-playfair text-2xl mb-4">Dress Code</h3>
+                    <p class="text-gold text-sm font-semibold mb-6">Semi-Formal</p>
+                    <p class="text-dark leading-relaxed">Please wear **Neutral Earth Tones**<br>(Beige, Sage, and Cream
+                        are lovely!)</p>
+                </div>
+            </div>
+
+            <div class="mt-20 max-w-2xl mx-auto p-12 border border-beige-200 bg-white/40 backdrop-blur-md"
+                data-aos="fade-up">
+                <h3 class="font-playfair text-3xl mb-10">Wedding Day Schedule</h3>
+                <div class="space-y-6 text-left">
+                    <div class="flex justify-between items-center border-b border-beige-200 pb-4">
+                        <span class="text-gold font-bold">02:00 PM</span>
+                        <span class="text-dark">Arrival & Welcome Drinks</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-beige-200 pb-4">
+                        <span class="text-gold font-bold">03:00 PM</span>
+                        <span class="text-dark">The Main Ceremony</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-beige-200 pb-4">
+                        <span class="text-gold font-bold">04:30 PM</span>
+                        <span class="text-dark">Cocktail Hour & Portraits</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-beige-200 pb-4">
+                        <span class="text-gold font-bold">05:30 PM</span>
+                        <span class="text-dark">Dinner & Grand Celebration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp" class="py-24 px-6 bg-[#e1e5d5]">
+        <div class="max-w-xl mx-auto text-center" data-aos="fade-up">
+            <h2 class="font-playfair text-4xl md:text-5xl mb-6 relative inline-block">
+                See You There?
+                <span class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-16 h-0.5 bg-gold"></span>
+            </h2>
+            <p class="mt-8 text-light mb-12 italic">Kindly respond by April 20, 2026.</p>
+
+            <form id="rsvp-form" class="text-left space-y-6">
+                <div>
+                    <label class="block text-xs uppercase tracking-widest text-light font-semibold mb-2"
+                        for="name">Guest Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required
+                        class="w-full px-4 py-3 bg-beige-50 border border-beige-200 focus:border-gold focus:outline-none transition-colors">
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-widest text-light font-semibold mb-2"
+                        for="attend">Will you attend?</label>
+                    <select id="attend" name="attendance" required
+                        class="w-full px-4 py-3 bg-beige-50 border border-beige-200 focus:border-gold focus:outline-none transition-colors">
+                        <option value="" disabled selected>Select Attendance</option>
+                        <option value="Yes, with pleasure!">Yes, with pleasure!</option>
+                        <option value="Sadly, I can't come">Sadly, I can't come</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-widest text-light font-semibold mb-2"
+                        for="message">Message for the Couple</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Your warm wishes..."
+                        class="w-full px-4 py-3 bg-beige-50 border border-beige-200 focus:border-gold focus:outline-none transition-colors"></textarea>
+                </div>
+                <button type="submit" id="submit-btn"
+                    class="w-full py-4 bg-dark text-white uppercase tracking-[0.3em] text-sm hover:bg-gold transition-all duration-500 shadow-lg hover:shadow-gold/20">
+                    Send
+                </button>
+                <div id="rsvp-status" class="mt-4 text-center text-sm hidden"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-beige-200 text-center">
+        <p class="font-playfair text-2xl italic text-gold mb-6 italic">Almieh & Neil Bryan</p>
+        <p class="text-xs tracking-widest text-light uppercase mb-2">&copy; 2026 Crafted with Love</p>
+        <p class="text-[10px] text-light/50 tracking-tighter">Philippines</p>
+    </footer>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 1000,
+            offset: 100
+        });
+
+        // Supabase Implementation
+        document.getElementById('rsvp-form').addEventListener('submit', async function (event) {
+            event.preventDefault();
+
+            const btn = document.getElementById('submit-btn');
+            const status = document.getElementById('rsvp-status');
+
+            btn.disabled = true;
+            btn.innerHTML = 'Sending...';
+            status.classList.remove('hidden', 'text-green-600', 'text-red-600');
+            status.classList.add('text-dark');
+            status.innerHTML = 'Saving your response...';
+
+            const formData = {
+                name: this.name.value,
+                attendance: this.attendance.value,
+                message: this.message.value
+            };
+
+            const { data, error } = await _supabase
+                .from('rsvps')
+                .insert([formData]);
+
+            if (error) {
+                btn.disabled = false;
+                btn.innerHTML = 'Send RSVP';
+                status.classList.remove('text-dark', 'text-green-600');
+                status.classList.add('text-red-600');
+                status.innerHTML = `Submission Failed: ${error.message}. Please ensure the 'rsvps' table exists in your Supabase project.`;
+                console.error('Supabase Error:', error);
+            } else {
+                btn.disabled = false;
+                btn.innerHTML = 'Send RSVP';
+                status.classList.remove('text-dark', 'text-red-600');
+                status.classList.add('text-green-600');
+                status.innerHTML = 'Thank you! Your RSVP has been saved successfully.';
+                this.reset();
+            }
+        });
+
+        // Countdown Logic
+        function updateCountdown() {
+            const targetDate = new Date('May 25, 2026 00:00:00').getTime();
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                document.getElementById('days').innerText = days.toString().padStart(2, '0');
+                document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
+            } else {
+                document.getElementById('countdown-container').innerHTML = `
+                    <h3 class="font-playfair text-3xl md:text-5xl text-gold italic">Today is the Day!</h3>
+                    <p class="text-light mt-4 tracking-widest uppercase">May 25, 2026</p>
+                `;
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+
+</html>

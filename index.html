@@ -225,58 +225,141 @@
                     special day</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Ceremony Card -->
-                <div class="relative overflow-hidden bg-white/70 backdrop-blur-sm border border-beige-200 hover:border-gold transition-all duration-500 shadow-sm flex flex-col min-h-[400px]"
+                <div onclick="openImageModal('ceremony')"
+                    class="cursor-pointer relative overflow-hidden bg-white/70 backdrop-blur-sm border border-beige-200 hover:border-gold transition-all duration-500 shadow-sm flex flex-col min-h-[400px]"
                     data-aos="zoom-in" data-aos-delay="100">
                     <img src="assets/ceremony.png" alt="Ceremony Background"
                         class="absolute inset-0 w-full h-full object-cover opacity-100 transition-transform duration-700 hover:scale-110 pointer-events-none">
 
+                    <!-- Click Me Sticker -->
+                    <div
+                        class="absolute top-4 right-4 z-30 bg-white/95 backdrop-blur-sm border border-beige-200 text-gold text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-full flex items-center gap-2 shadow-xl animate-bounce pointer-events-none">
+                        <span>Click Me</span>
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5"></path>
+                        </svg>
+                    </div>
+
                     <div
                         class="absolute bottom-0 left-0 w-full bg-white/95 backdrop-blur-md p-6 border-t border-beige-200 z-20">
                         <div class="flex justify-between items-center mb-3">
-                            <h3 class="font-playfair text-xl text-dark">Ceremony</h3>
-                            <p class="text-gold text-[10px] font-bold tracking-widest uppercase mb-1">1:00 PM</p>
+                            <h3 class="font-playfair text-2xl text-dark">Ceremony</h3>
+                            <p class="text-gold text-[11px] font-bold tracking-widest uppercase mb-1">1:00 PM</p>
                         </div>
                         <p
-                            class="text-dark text-[11px] leading-snug font-bold tracking-wide uppercase pt-3 border-t border-beige-100">
+                            class="text-dark text-xs leading-snug font-bold tracking-wide uppercase pt-3 border-t border-beige-100">
                             Jesus Saves Fundamental Baptist Church<br>
-                            <span class="text-[10px] font-medium opacity-70">Soldier's Hill Zone 10, Bulua, CDO</span>
+                            <span class="text-[10px] font-medium opacity-70 mt-1 block">Soldier's Hill Zone 10, Bulua,
+                                CDO</span>
                         </p>
                     </div>
                 </div>
 
                 <!-- Reception Card -->
-                <div class="relative overflow-hidden bg-white/70 backdrop-blur-sm border border-beige-200 hover:border-gold transition-all duration-500 shadow-sm flex flex-col min-h-[400px]"
+                <div onclick="openImageModal('reception')"
+                    class="cursor-pointer relative overflow-hidden bg-white/70 backdrop-blur-sm border border-beige-200 hover:border-gold transition-all duration-500 shadow-sm flex flex-col min-h-[600px]"
                     data-aos="zoom-in" data-aos-delay="200">
-                    <img src="assets/reception.png" alt="Reception Background"
+                    <img src="assets/reception.jpg" alt="Reception Background"
                         class="absolute inset-0 w-full h-full object-cover opacity-100 transition-transform duration-700 hover:scale-110 pointer-events-none">
+
+                    <!-- Click Me Sticker -->
+                    <div
+                        class="absolute top-4 right-4 z-30 bg-white/95 backdrop-blur-sm border border-beige-200 text-gold text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-full flex items-center gap-2 shadow-xl animate-bounce pointer-events-none">
+                        <span>Click Me</span>
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5"></path>
+                        </svg>
+                    </div>
 
                     <div
                         class="absolute bottom-0 left-0 w-full bg-white/95 backdrop-blur-md p-6 border-t border-beige-200 z-20">
                         <div class="flex justify-between items-center mb-3">
-                            <h3 class="font-playfair text-xl text-dark">Reception</h3>
-                            <p class="text-gold text-[10px] font-bold tracking-widest uppercase mb-1">Celebration</p>
+                            <h3 class="font-playfair text-2xl text-dark">Reception</h3>
+                            <p class="text-gold text-[11px] font-bold tracking-widest uppercase mb-1">Celebration</p>
                         </div>
                         <p
-                            class="text-dark text-[11px] leading-snug font-bold tracking-wide uppercase pt-3 border-t border-beige-100">
+                            class="text-dark text-xs leading-snug font-bold tracking-wide uppercase pt-3 border-t border-beige-100">
                             Casa De Canitoan<br>
-                            <span class="text-[10px] font-medium opacity-70">Cagayan de Oro City</span>
+                            <span class="text-[10px] font-medium opacity-70 mt-1 block">Pagatpat Road/Macapagal Drive,
+                                Brgy. Canitoan, Cagayan de Oro City</span>
                         </p>
                     </div>
                 </div>
 
-                <div class="p-10 bg-white/60 backdrop-blur-sm border border-beige-200 hover:border-gold transition-colors duration-500 shadow-sm"
-                    data-aos="zoom-in" data-aos-delay="300">
-                    <h3 class="font-playfair text-2xl mb-4">Dress Code</h3>
-                    <p class="text-gold text-sm font-semibold mb-6">Semi-Formal</p>
-                    <img src="assets/color.png" alt="Color Palette"
-                        class="mx-auto w-full max-w-[235px] h-39 object-cover opacity-95 rounded-sm shadow-sm mb-6">
-                    <p class="text-dark text-[11px] mb-2 italic leading-relaxed opacity-70 px-4">We kindly request our
-                        guests to wear the following colors on our special day.
-                    </p>
-                    <p class="text-dark leading-relaxed mb-6 capitalize px-4 font-bold">nude, beige, brown</p>
+            </div>
+
+            <div class="mt-28 mb-10" data-aos="fade-up">
+                <h2 class="font-playfair text-4xl md:text-5xl mb-6 relative inline-block">
+                    Dress Code
+                    <span class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-16 h-0.5 bg-gold"></span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch w-full mb-8">
+                <!-- Principal Sponsors Container -->
+                <div class="w-full p-8 md:p-10 bg-white/60 backdrop-blur-sm border border-beige-200 hover:border-gold transition-colors duration-500 shadow-sm flex flex-col h-full"
+                    data-aos="zoom-in" data-aos-delay="200">
+                    <h3 class="font-playfair text-3xl mb-6">Principal Sponsors</h3>
+
+                    <div class="mb-auto flex items-center justify-center p-2">
+                        <img src="assets/principal_sponsors.png" alt="Principal Sponsors Dress Code"
+                            class="w-full max-w-[260px] md:max-w-[280px] h-auto max-h-48 md:max-h-56 object-contain rounded-lg">
+                    </div>
+
+                    <div class="text-center px-2 md:px-6 mt-8">
+                        <p class="text-dark text-sm md:text-[15px] leading-relaxed font-bold mb-3">
+                            Ninongs: Barong and Slacks
+                        </p>
+                        <p class="text-dark text-sm md:text-[15px] leading-relaxed font-bold">
+                            Ninangs: Beige/Light Brown Dress
+                        </p>
+                    </div>
                 </div>
+
+                <!-- Guests Container -->
+                <div class="w-full p-8 md:p-10 bg-white/60 backdrop-blur-sm border border-beige-200 hover:border-gold transition-colors duration-500 shadow-sm flex flex-col h-full"
+                    data-aos="zoom-in" data-aos-delay="300">
+                    <h3 class="font-playfair text-3xl mb-6">Guests</h3>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-auto">
+                        <img src="assets/dresscode1.png" alt="Dress Code Example 1"
+                            class="w-full h-auto object-cover rounded-lg">
+                        <img src="assets/dresscode2.png" alt="Dress Code Example 2"
+                            class="w-full h-auto object-cover rounded-lg">
+                        <img src="assets/dresscode3.png" alt="Dress Code Example 3"
+                            class="w-full h-auto object-cover rounded-lg">
+                    </div>
+
+                    <div class="text-center px-2 md:px-6 mt-8">
+                        <p class="text-dark text-sm md:text-[15px] leading-relaxed font-bold mb-3">
+                            Ladies: Formal/ Semi-Formal Dress
+                        </p>
+                        <p class="text-dark text-sm md:text-[15px] leading-relaxed font-bold">
+                            Gentlemen: Long Sleeved Polo, Slacks, Pants
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notice / Rules Container Below -->
+            <div class="w-full p-8 md:p-10 bg-white/60 backdrop-blur-sm border border-beige-200 hover:border-gold transition-colors duration-500 shadow-sm text-center"
+                data-aos="fade-up" data-aos-delay="400">
+
+                <p class="text-dark text-[14px] md:text-base italic leading-relaxed opacity-80 mb-6 font-bold">
+                    nude, brown and beige shade will do.
+                </p>
+
+                <img src="assets/color.png" alt="Color Palette"
+                    class="mx-auto w-full max-w-[260px] md:max-w-[320px] h-auto object-cover opacity-95 rounded-sm shadow-sm mb-6">
+
+                <p
+                    class="text-red-800 font-bold text-[11px] md:text-[13px] uppercase tracking-widest border border-red-800/20 bg-red-50 py-3 md:py-4 px-4 md:px-6 rounded-md inline-block">
+                    Avoid pure white, black, slippers, shorts and t-shirts.
+                </p>
             </div>
 
             <div class="mt-20 max-w-2xl mx-auto p-12 border border-beige-200 bg-white/40 backdrop-blur-md"
@@ -343,14 +426,37 @@
                 </div>
             </div>
 
-            <!-- Guest Policy Section -->
+
+
+            <!-- Snap and Share Section -->
             <div class="mt-10 max-w-2xl mx-auto p-12 border border-beige-200 bg-white/40 backdrop-blur-md text-center"
                 data-aos="fade-up">
-                <h3 class="font-playfair text-2xl mb-6 italic text-gold">Can I bring someone with me?</h3>
-                <p class="text-dark text-[13px] leading-relaxed px-6 font-medium">
-                    To ensure everyone’s comfort, please take note of the number of seats reserved for you. <br>
-                    <span class="opacity-70 mt-4 block">We kindly request that only invited guests attend due to limited
-                        space.</span>
+                <div class="flex justify-center mb-6">
+                    <svg class="w-16 h-16 text-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="7" width="18" height="13" rx="2" ry="2"></rect>
+                        <path d="M16 7V5a2 2 0 0 0-2-2H10a2 2 0 0 0-2 2v2"></path>
+                        <circle cx="12" cy="13" r="4"></circle>
+                        <circle cx="18" cy="10" r="1.5" fill="currentColor" stroke="none"></circle>
+                    </svg>
+                </div>
+                <h3 class="font-playfair text-4xl mb-8">Snap <span class="italic font-light">and</span> Share</h3>
+
+                <p class="text-dark text-[15px] leading-relaxed mb-6 px-4 font-medium">
+                    Be part of our special day by capturing moments filled with love, laughter, and joy.
+                </p>
+                <p class="text-dark text-[15px] leading-relaxed mb-6 px-4 font-medium">
+                    Feel free to take photos and share them with us—every candid and smile matters.
+                </p>
+                <p class="text-dark text-[15px] leading-relaxed mb-6 px-4 font-medium">
+                    Don’t forget to tag us and use our wedding hashtag as we create memories together.
+                </p>
+                <p class="text-dark text-[15px] leading-relaxed mb-10 px-4 font-medium">
+                    We’re excited to see your beautiful snaps!
+                </p>
+
+                <p class="font-montserrat text-2xl font-black tracking-wide text-dark">
+                    #WhenNeilMetAlmieh
                 </p>
             </div>
 
@@ -375,6 +481,17 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Guest Policy Section -->
+            <div class="mt-10 max-w-2xl mx-auto p-12 border border-beige-200 bg-white/40 backdrop-blur-md text-center"
+                data-aos="fade-up">
+                <h3 class="font-playfair text-2xl mb-6 italic text-gold">Can I bring someone with me?</h3>
+                <p class="text-dark text-[13px] leading-relaxed px-6 font-medium">
+                    To ensure everyone’s comfort, please take note of the number of seats reserved for you. <br>
+                    <span class="opacity-70 mt-4 block">We kindly request that only invited guests attend due to limited
+                        space.</span>
+                </p>
+            </div>
         </div>
     </section>
 
@@ -385,7 +502,7 @@
                 See You There?
                 <span class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-16 h-0.5 bg-gold"></span>
             </h2>
-            <p class="mt-8 text-light mb-12 italic">Kindly respond by May 15, 2026.</p>
+            <p class="mt-8 text-light mb-12 italic">Kindly respond by May 18, 2026.</p>
 
             <form id="rsvp-form" class="text-left space-y-6">
                 <div>
@@ -681,6 +798,85 @@
             </div>
         </div>
     </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal"
+        class="fixed inset-0 z-[100] hidden flex-col items-center justify-center bg-black/90 backdrop-blur-md p-4 md:p-6 cursor-pointer"
+        onclick="closeImageModal()">
+        <button onclick="closeImageModal()"
+            class="absolute top-4 right-4 md:top-6 md:right-6 text-white/50 hover:text-white z-20 transition-colors">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <div class="relative max-w-6xl w-full flex items-center justify-center cursor-auto h-[90vh] md:h-[75vh]"
+            onclick="event.stopPropagation()">
+
+            <div class="bg-white shadow-2xl flex flex-col md:flex-row w-full rounded-2xl overflow-hidden h-full">
+                <!-- Image Section -->
+                <div class="relative w-full md:w-[60%] flex justify-center items-center bg-white shrink-0 p-4 md:p-8">
+                    <img id="modalImage" src="" alt="Full Image" class="w-full h-full object-contain">
+                </div>
+
+                <!-- Info Section (Right side) -->
+                <div
+                    class="w-full md:w-[40%] bg-[#faf9f6] p-8 md:p-12 flex flex-col justify-center border-t md:border-t-0 md:border-l border-beige-200 z-20 shrink-0 overflow-y-auto">
+                    <div class="mb-6">
+                        <h3 id="modalTitle" class="font-playfair text-4xl text-dark mb-2"></h3>
+                        <p id="modalTime" class="text-gold text-sm font-bold tracking-widest uppercase"></p>
+                    </div>
+                    <p id="modalAddress"
+                        class="text-dark text-sm leading-relaxed font-bold tracking-wide uppercase pt-6 border-t border-beige-200">
+                    </p>
+
+                    <!-- Google Maps Link Button -->
+                    <a id="modalMapLink" href="#" target="_blank"
+                        class="inline-block mt-8 py-4 px-6 bg-dark text-white uppercase tracking-[0.2em] text-[10px] md:text-xs font-bold hover:bg-gold transition-colors text-center w-full shadow-md rounded-sm">
+                        View on Google Maps
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const imageModalData = {
+            'ceremony': {
+                imgSrc: 'assets/ceremony.png',
+                title: 'Ceremony',
+                time: '1:00 PM',
+                address: 'Jesus Saves Fundamental Baptist Church<br><span class="text-[10px] md:text-xs font-medium opacity-70 block mt-2">Soldier\'s Hill Zone 10, Bulua, CDO</span>',
+                mapLink: 'https://maps.app.goo.gl/8tTAqjjSBDoj6uG77'
+            },
+            'reception': {
+                imgSrc: 'assets/reception.jpg',
+                title: 'Reception',
+                time: 'Celebration',
+                address: 'Casa De Canitoan<br><span class="text-[10px] md:text-xs font-medium opacity-70 block mt-2">Cagayan de Oro City</span>',
+                mapLink: 'https://maps.app.goo.gl/wFyJPrLzZVGHpcNu9'
+            }
+        };
+
+        function openImageModal(key) {
+            const data = imageModalData[key];
+            if (data) {
+                document.getElementById('modalImage').src = data.imgSrc;
+                document.getElementById('modalTitle').innerText = data.title;
+                document.getElementById('modalTime').innerText = data.time;
+                document.getElementById('modalAddress').innerHTML = data.address;
+                document.getElementById('modalMapLink').href = data.mapLink;
+
+                document.getElementById('imageModal').classList.remove('hidden');
+                document.getElementById('imageModal').classList.add('flex');
+            }
+        }
+
+        function closeImageModal() {
+            document.getElementById('imageModal').classList.add('hidden');
+            document.getElementById('imageModal').classList.remove('flex');
+        }
+    </script>
 </body>
 
 </html>

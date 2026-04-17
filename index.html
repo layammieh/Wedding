@@ -841,24 +841,25 @@
 
             <div class="bg-white shadow-2xl flex flex-col md:flex-row w-full rounded-2xl overflow-hidden h-full">
                 <!-- Image Section -->
-                <div class="relative w-full md:w-[60%] flex justify-center items-center bg-white shrink-0 p-4 md:p-8">
+                <div
+                    class="relative w-full h-[55%] md:h-full md:w-[60%] flex justify-center items-center bg-white p-4 md:p-8">
                     <img id="modalImage" src="" alt="Full Image" class="w-full h-full object-contain">
                 </div>
 
                 <!-- Info Section (Right side) -->
                 <div
-                    class="w-full md:w-[40%] bg-[#faf9f6] p-8 md:p-12 flex flex-col justify-center border-t md:border-t-0 md:border-l border-beige-200 z-20 shrink-0 overflow-y-auto">
-                    <div class="mb-6">
-                        <h3 id="modalTitle" class="font-playfair text-4xl text-dark mb-2"></h3>
-                        <p id="modalTime" class="text-gold text-sm font-bold tracking-widest uppercase"></p>
+                    class="w-full h-[45%] md:h-full md:w-[40%] bg-[#faf9f6] p-6 md:p-12 flex flex-col justify-center border-t md:border-t-0 md:border-l border-beige-200 z-20 overflow-y-auto">
+                    <div class="mb-4 md:mb-6 mt-auto md:mt-0">
+                        <h3 id="modalTitle" class="font-playfair text-3xl md:text-4xl text-dark mb-1 md:mb-2"></h3>
+                        <p id="modalTime" class="text-gold text-xs md:text-sm font-bold tracking-widest uppercase"></p>
                     </div>
                     <p id="modalAddress"
-                        class="text-dark text-sm leading-relaxed font-bold tracking-wide uppercase pt-6 border-t border-beige-200">
+                        class="text-dark text-[11px] md:text-sm leading-relaxed font-bold tracking-wide uppercase pt-4 md:pt-6 border-t border-beige-200">
                     </p>
 
                     <!-- Google Maps Link Button -->
                     <a id="modalMapLink" href="#" target="_blank"
-                        class="inline-block mt-8 py-4 px-6 bg-dark text-white uppercase tracking-[0.2em] text-[10px] md:text-xs font-bold hover:bg-gold transition-colors text-center w-full shadow-md rounded-sm">
+                        class="inline-block mt-4 md:mt-8 mb-auto md:mb-0 py-3 md:py-4 px-4 md:px-6 bg-dark text-white uppercase tracking-[0.2em] text-[10px] md:text-xs font-bold hover:bg-gold transition-colors text-center w-full shadow-md rounded-sm">
                         View on Google Maps
                     </a>
                 </div>
